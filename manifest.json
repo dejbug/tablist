@@ -1,0 +1,28 @@
+{
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{a77435b4-77a2-4dde-82a0-805bdc09c259}",
+			"strict_min_version": "58"
+		}
+	},
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"browser_action": {
+		"browser_style": true,
+		"default_title": "Tablist",
+		"default_icon": {
+			"32" : "icons/icon-32.png",
+			"64" : "icons/icon-64.png"
+		}
+	},
+	"description": "Simple tab listing addon for firefox",
+	"homepage_url": "https://github.com/dejbug/tablist",
+	"manifest_version": 2,
+	"name": "Tablist",
+	"permissions": [
+		"tabs",
+		"clipboardWrite"
+	],
+	"version": "1.0"
+}
