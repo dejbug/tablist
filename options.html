@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<style>
+		form {
+			width: 100%;
+			display: grid;
+			gap: .4em;
+			grid-template-columns: repeat(3, minmax(13em, min-content)) auto;
+		}
+		#presets-pane {
+			grid-row: 1;
+			grid-column: 1 / 2;
+		}
+		#options-pane {
+			grid-row: 1;
+			grid-column: 2 / 3;
+		}
+		#separators-pane-pane {
+			grid-row: 1;
+			grid-column: 3 / 4;
+		}
+		#format-pane {
+			grid-row: 2;
+			grid-column: 1 / 4;
+		}
+		#button-pane {
+			grid-row: 3;
+			grid-column: 1 / 4;
+			display: flex;
+			justify-content: flex-end;
+		}
+		button[type=submit] {
+		}
+		#format {
+			width: 100%;
+			font-size: 160%;
+			padding: .3em;
+		}
+		.disabled {
+			color: gray;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<fieldset id="presets-pane">
+			<legend>Presets:</legend>
+
+			<div>
+				<input type="radio" id="text" name="preset" value="text" checked />
+				<label for="text">Text</label>
+			</div>
+
+			<div>
+				<input type="radio" id="html" name="preset" value="html" />
+				<label for="html">Html</label>
+			</div>
+
+			<div>
+				<input type="radio" id="markdown" name="preset" value="markdown" />
+				<label for="markdown">Markdown</label>
+			</div>
+
+			<div class="disabled">
+				<input disabled type="radio" id="custom" name="preset" value="custom" />
+				<label for="custom">Custom</label>
+			</div>
+		</fieldset>
+
+		<fieldset id="options-pane">
+			<legend>Presets:</legend>
+
+			<div>
+				<input type="checkbox" id="index" name="option" value="index" />
+				<label for="index">Index</label>
+			</div>
+
+			<div>
+				<input type="checkbox" id="title" name="option" value="title" checked />
+				<label for="title">Title</label>
+			</div>
+
+			<div>
+				<input type="checkbox" id="url" name="option" value="url" checked />
+				<label for="url">Url</label>
+			</div>
+		</fieldset>
+
+
+		<fieldset id="separators-pane">
+			<legend>Separator:</legend>
+
+			<div>
+				<input type="radio" id="space" name="separator" value="space" checked />
+				<label for="space">Style 1</label>
+			</div>
+
+			<div>
+				<input type="radio" id="tab" name="separator" value="tab" />
+				<label for="tab">Style 2</label>
+			</div>
+
+			<div>
+				<input type="radio" id="comma" name="separator" value="comma" />
+				<label for="comma">Style 3</label>
+			</div>
+
+			<div>
+				<input type="radio" id="semicolon" name="separator" value="semicolon" />
+				<label for="semicolon">Style 4</label>
+			</div>
+		</fieldset>
+
+
+		<fieldset id="format-pane">
+			<legend>Format:</legend>
+
+			<div>
+				<input readonly type="text" id="format" name="format" />
+			</div>
+		</fieldset>
+
+		<div id="button-pane">
+			<button type="submit">Save</button>
+		</div>
+	</form>
+
+	<script src="options.js"></script>
+</body>
+</html>
